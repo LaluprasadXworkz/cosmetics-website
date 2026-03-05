@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LuxeBeauty - Premium Makeup Collection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover luxury beauty products curated for you at LuxeBeauty">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar bg-dark text-white py-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+                <small><i class="fas fa-truck me-2"></i>Free Shipping on Orders Over $50</small>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <small><i class="fas fa-phone me-2"></i>1-800-LUXE-BEAUTY</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="fas fa-gem me-2" style="color: #ffd700;"></i>
+            LUXEBEAUTY
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Shop</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="products.html?category=lipstick">Lipstick</a></li>
+                        <li><a class="dropdown-item" href="products.html?category=foundation">Foundation</a></li>
+                        <li><a class="dropdown-item" href="products.html?category=mascara">Mascara</a></li>
+                        <li><a class="dropdown-item" href="products.html?category=eyeshadow">Eyeshadow</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="products.html">All Products</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="d-flex align-items-center gap-2">
+                <a href="#" class="text-white me-2" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fas fa-search fa-lg"></i>
+                </a>
+                <a href="#" class="text-white me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <i class="fas fa-user fa-lg"></i>
+                </a>
+                <button class="btn btn-outline-light me-2 position-relative" onclick="toggleWishlist()">
+                    <i class="fas fa-heart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="wishlistCount">0</span>
+                </button>
+                <button class="btn btn-warning position-relative" onclick="toggleCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT WRAPPER -->
+<main class="main-content">
+
+    <!-- Hero Section with Parallax -->
+    <section class="hero-section position-relative">
+        <div class="hero-overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6 text-white" data-aos="fade-right">
+                    <h6 class="text-warning text-uppercase mb-3"><i class="fas fa-star me-2"></i>New Collection 2026</h6>
+                    <h1 class="display-3 fw-bold mb-4">Premium Makeup Collection</h1>
+                    <p class="lead mb-4">Discover our curated selection of luxury beauty products, designed to enhance your natural beauty.</p>
+                    <div class="d-flex gap-3">
+                        <a href="products.html" class="btn btn-warning btn-lg px-4">
+                            Shop Now <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="about.html" class="btn btn-outline-light btn-lg px-4">
+                            Learn More
+                        </a>
+                    </div>
+                    <div class="mt-5 d-flex gap-4">
+                        <div>
+                            <h3 class="text-warning">500+</h3>
+                            <p>Products</p>
+                        </div>
+                        <div>
+                            <h3 class="text-warning">50K+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div>
+                            <h3 class="text-warning">4.8</h3>
+                            <p>Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-warning text-uppercase">Shop by Category</h6>
+                <h2 class="display-6 fw-bold">Popular Categories</h2>
+                <p class="text-muted">Explore our most popular makeup categories</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="products.html?category=lipstick" class="text-decoration-none">
+                        <div class="category-card text-center p-4 bg-white rounded-3">
+                            <div class="category-icon mb-3">
+                                <i class="fas fa-lipstick fa-3x text-warning"></i>
+                            </div>
+                            <h5>Lipstick</h5>
+                            <p class="text-muted small">50+ Products</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="products.html?category=foundation" class="text-decoration-none">
+                        <div class="category-card text-center p-4 bg-white rounded-3">
+                            <div class="category-icon mb-3">
+                                <i class="fas fa-magic fa-3x text-warning"></i>
+                            </div>
+                            <h5>Foundation</h5>
+                            <p class="text-muted small">30+ Products</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="300">
+                    <a href="products.html?category=mascara" class="text-decoration-none">
+                        <div class="category-card text-center p-4 bg-white rounded-3">
+                            <div class="category-icon mb-3">
+                                <i class="fas fa-eye fa-3x text-warning"></i>
+                            </div>
+                            <h5>Mascara</h5>
+                            <p class="text-muted small">25+ Products</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="400">
+                    <a href="products.html?category=eyeshadow" class="text-decoration-none">
+                        <div class="category-card text-center p-4 bg-white rounded-3">
+                            <div class="category-icon mb-3">
+                                <i class="fas fa-paint-brush fa-3x text-warning"></i>
+                            </div>
+                            <h5>Eyeshadow</h5>
+                            <p class="text-muted small">40+ Products</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-warning text-uppercase">Featured Products</h6>
+                <h2 class="display-6 fw-bold">Best Sellers</h2>
+                <p class="text-muted">Most loved products by our customers</p>
+            </div>
+            
+            <div class="row g-4" id="featuredProducts">
+                <!-- Products will be loaded here via JS -->
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="products.html" class="btn btn-outline-dark btn-lg">
+                    View All Products <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Banner -->
+    <section class="offer-banner py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h6 class="text-warning text-uppercase">Limited Time Offer</h6>
+                    <h2 class="display-5 fw-bold mb-3">Get 20% Off Your First Order</h2>
+                    <p class="lead mb-4">Sign up for our newsletter and receive exclusive offers</p>
+                    <form class="row g-2">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-warning btn-lg w-100">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4 text-center" data-aos="fade-left">
+                    <i class="fas fa-gift fa-6x text-warning"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<!-- END MAIN CONTENT -->
+
+<!-- Footer -->
+<footer class="bg-black text-white pt-5 mt-auto">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="fw-bold mb-3">
+                    <i class="fas fa-gem text-warning me-2"></i>
+                    LUXEBEAUTY
+                </h5>
+                <p class="text-muted">Discover luxury beauty products curated for you. We bring the best makeup brands from around the world.</p>
+                <div class="social-links">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-pinterest fa-lg"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold mb-3">Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none">About Us</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none">Contact</a></li>
+                    <li class="mb-2"><a href="blog.html" class="text-muted text-decoration-none">Blog</a></li>
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold mb-3">Categories</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="products.html?category=lipstick" class="text-muted text-decoration-none">Lipstick</a></li>
+                    <li class="mb-2"><a href="products.html?category=foundation" class="text-muted text-decoration-none">Foundation</a></li>
+                    <li class="mb-2"><a href="products.html?category=mascara" class="text-muted text-decoration-none">Mascara</a></li>
+                    <li class="mb-2"><a href="products.html?category=eyeshadow" class="text-muted text-decoration-none">Eyeshadow</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-4">
+                <h6 class="fw-bold mb-3">Contact Info</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-map-marker-alt text-warning me-2"></i>123 Beauty Street, New York, NY 10001</li>
+                    <li class="mb-3"><i class="fas fa-phone text-warning me-2"></i>+1 (800) 589-3288</li>
+                    <li class="mb-3"><i class="fas fa-envelope text-warning me-2"></i>info@luxebeauty.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr class="my-4 bg-secondary">
+        
+        <div class="row pb-4">
+            <div class="col-md-6 text-center text-md-start">
+                <small class="text-muted">© 2026 LuxeBeauty. All Rights Reserved.</small>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <small class="text-muted me-3">Privacy Policy</small>
+                <small class="text-muted me-3">Terms of Use</small>
+                <small class="text-muted">Shipping Policy</small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Search Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Search Products</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control form-control-lg" placeholder="Search for products...">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sign In</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <button class="btn btn-dark w-100 mb-3">Sign In</button>
+                    <p class="text-center mb-0">Don't have an account? <a href="#">Sign Up</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h5>Shopping Cart</h5>
+        <button class="btn-close btn-close-white" onclick="toggleCart()"></button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+        <div class="d-flex justify-content-between mb-3">
+            <span>Subtotal:</span>
+            <span class="fw-bold">$<span id="cartTotal">0</span></span>
+        </div>
+        <button class="btn btn-dark w-100 mb-2">Checkout</button>
+        <button class="btn btn-outline-dark w-100" onclick="toggleCart()">Continue Shopping</button>
+    </div>
+</div>
+
+<!-- Wishlist Panel -->
+<div id="wishlistPanel" class="wishlist-panel">
+    <div class="wishlist-header">
+        <h5>My Wishlist</h5>
+        <button class="btn-close btn-close-white" onclick="toggleWishlist()"></button>
+    </div>
+    <div id="wishlistItems" class="wishlist-items"></div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script src="js/api.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/ui.js"></script>
+
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+    
+    // Load featured products
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof loadFeaturedProducts === 'function') {
+            loadFeaturedProducts();
+        }
+    });
+</script>
+
+</body>
+</html>
